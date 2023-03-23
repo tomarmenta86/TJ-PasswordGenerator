@@ -27,6 +27,6 @@ Creat an application that an employee can use to generate a password based on us
 ![Screenshot1]
 ![Screenshot2]
 
-## Citation 
-# Starter code reference
+# Citation 
+## Starter code reference
 https://github.com/coding-boot-camp/friendly-parakeet.git
