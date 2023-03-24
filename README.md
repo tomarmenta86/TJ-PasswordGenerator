@@ -23,8 +23,14 @@ Creat an application that an employee can use to generate a password based on us
 * Acceptance criteria is met 
 * Requirments are satisfied
 
-## Screenshots of Deployed Generator
-![assets/PasswordGenSC.png]
+## Screenshot of Deployed Generator
+![Screenshot1](assets/PasswordGenSC.png)
+
+# URLs
+## GitHub
+https://github.com/tomarmenta86
+## Deployed Site
+https://tomarmenta86.github.io/TJ-PasswordGenerator/
 
 
 # Citation 
