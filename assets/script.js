@@ -4,13 +4,10 @@
 const generateBtn = document.getElementById("generate");
 
 //Added strings for potential characters etc
-var stringOfUppCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var stringOfLowCase = "abcdefghijklmnopqrstuvwxyz"
-var stringOfSymbols = "!@#$%&_?"
-var stringOfNum = "0123456789"
 
 //Created for loop functions for variable randomization
 function randUppCase(){
+    var stringOfUppCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var randUpper = '';
 
     for (let i = 1; i <= 26; i++) {
@@ -22,6 +19,7 @@ function randUppCase(){
 }
 
 function randLowCase(){
+    var stringOfLowCase = "abcdefghijklmnopqrstuvwxyz"
     var randLower = '';
 
     for (let i = 1; i <= 26; i++) {
@@ -33,6 +31,7 @@ function randLowCase(){
 }
 
 function randSymbol(){
+    var stringOfSymbols = "!@#$%&_?"
     var randSymbols = '';
 
     for (let i = 1; i <= 8; i++) {
@@ -44,6 +43,7 @@ function randSymbol(){
 }
 
 function randNum(){
+    var stringOfNum = "0123456789"
     var randNums = '';
 
     for (let i = 1; i <= 8; i++) {
@@ -53,10 +53,42 @@ function randNum(){
     }
     return randNums
 }
+//Created function for password generation
+function passwordGenerator(){
+    var randPass = '';
+    var genPass = '';
+//Added if statements to determine what to include in password
+    if(document.querySelector('input[id="num"]:checked'))
+    {
+        randPass += randNum();
+    }
+    if(document.querySelector('input[id="sym"]:checked'))
+    {
+        randPass += randSymbol();
+    }
+    if(document.querySelector('input[id="low"]:checked'))
+    {
+        randPass += randLowCase();
+    }
+    if(document.querySelector('input[id="upp"]:checked'))
+    {
+        randPass += randUppCase();
+    }
+
+    var inputLen = document.getElementById("len").value;
+
+    for (let i = 0; i <= inputLen; i++) {
+        var char = Math.floor(Math.random() * randPass.length);
+          
+        genPass += randPass.charAt(char)
+    }
+
+    return genPass
+}
 
 // Write password to the password ID
 // Add event listener to generate button
 generateBtn.addEventListener("click",()=>{
-    //Adding function calls 
-    document.getElementById("password").innerText = randUppCase()+randLowCase()+randSymbol()+randNum();
+//Adding function calls 
+    document.getElementById("password").innerText = passwordGenerator();
 });

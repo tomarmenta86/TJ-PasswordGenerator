@@ -24,8 +24,8 @@ Creat an application that an employee can use to generate a password based on us
 * Requirments are satisfied
 
 ## Screenshots of Deployed Generator
-![Screenshot1]
-![Screenshot2]
+![assets/PasswordGenSC.png]
+
 
 # Citation 
 ## Starter code reference
